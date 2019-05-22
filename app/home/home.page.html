@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Tab One
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button (click)="adddata()" color="warning" expand="full">เพิ่มข้อมูล</ion-button>
+  <ion-card *ngFor="let item of dataList">
+    <ion-card-content>
+      
+      
+      รหัสการจัดส่ง : {{item.IDsentbb}}<br>
+      ชื่อผู้รับ : {{item.namepro}}<br>
+      ประเภท:  {{item.catepro}}<br>
+      สถานะ : {{item.statuspro}}<br>
+      <div class="row">
+        <div class="col-6">
+          <ion-button (click)="editdata(item.IDsentbb)" expand="bt">Edit </ion-button>
+        </div>
+        <div class="col-6">
+          <ion-button color="danger" (click)="deletedata(item.IDsentbb)" class="bt">ลบ</ion-button>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

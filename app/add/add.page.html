@@ -1,0 +1,12 @@
+<ion-content>
+  <form novalidate #myForm="ngForm" (ngSubmit)="insert(myForm.value)">
+  ไอดี<ion-input type="text" ngModel name="IDsentbb" placeholder="Enter Input"></ion-input>
+
+ชื่อ-นามสกุล<ion-input  type="text" ngModel name="namepro" placeholder="Enter Input"></ion-input>
+ประเภท<ion-input type="text" ngModel name="catepro" placeholder="Enter Input"></ion-input>
+
+สเตตัส<ion-input  type="text" ngModel name="statuspro" placeholder="Enter Input"></ion-input>
+
+<ion-button type="submit" expand="full">save</ion-button>
+</form>
+</ion-content>
